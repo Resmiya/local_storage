@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(169, 243, 169)">
+   <div class="mt-5">
+        <h1 class="text-center">Login Form</h1>
+        <div class="w-25 container p-5 mt-4 bg-light shadow-lg rounded-5 rounded-top-0 border border-2">
+            
+              <div class="my-5">
+                <label for="">Username</label>
+              <input type="text" class="form-control" placeholder="Enter username " id="txtuserid"> 
+            </div>
+    
+            <div class="my-5">
+                <label for="">Password</label>
+                <input type="text" class="form-control" placeholder="Enter password">
+             </div>
+             <div class="my-5 text-center">
+              <button type="submit" class="btn btn-success" onclick="login()">Login</button>
+              
+             </div>
+        </div>
+   </div>
+    
+   <script>
+    function login() {
+            var username = document.getElementById("txtuserid").value;
+            localStorage.setItem("user",username)
+            if (username=== "") {
+                alert("Please enter a User name.");
+                return;
+            }
+            window.location.href = "dashboard.html?username=" + encodeURIComponent(username);
+    }
+
+   </script>
+</body>
+</html>

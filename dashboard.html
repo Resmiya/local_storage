@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(147, 223, 244);">
+
+   <script>
+        
+        var urlParams = new URLSearchParams(window.location.search);
+        var username = urlParams.get('username');
+
+        
+        document.body.innerHTML += "<h1><center> Welcome " + username + "</center></h1>";
+    </script> 
+</body>
+</html>
